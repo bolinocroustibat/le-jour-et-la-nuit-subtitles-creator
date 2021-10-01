@@ -17,7 +17,7 @@ If you don't use Poetry and want to install the Python dependencies manually, th
 
 Open the file `config.py` and modify the following values if necessary:
 - `OUTPUT_FILENAME`: the path and filename of the output subtitle files <ins>without the extension</ins>. The script will add the language and .srt extension by itself.
-- `SOURCE_FILE_URL`: the URL of the source Google Doc, in CSV format (shouldn't be changed)
+- `SOURCE_FILE_URL`: the URL of the source Google Doc with the dialogues transcribed in French, in CSV format (this shouldn't be changed).
 
 
 ## To run
