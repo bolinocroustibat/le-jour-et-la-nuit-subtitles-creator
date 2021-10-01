@@ -1,4 +1,9 @@
-# Requirements
+# Le Jour et la Nuit subtitles creator
+
+Generate valid subtitles movie files in any language for the masterpiece movie "[Le Jour et la Nuit](https://en.wikipedia.org/wiki/Day_and_Night_(1997_film))" by [BHL](https://en.wikipedia.org/wiki/Bernard-Henri_L%C3%A9vy).
+
+
+## Requirements
 
 - Python 3.9 (not tested below 3.9, but it should be fine with 3.8)
 - [Poetry](https://python-poetry.org/) (Python packaging manager)
@@ -8,26 +13,26 @@ If you don't use Poetry and want to install the Python dependencies manually, th
 - [typer](https://pypi.org/project/typer/)
 
 
-# Configure
+## Configure
 
 Open the file `config.py` and modify the following values if necessary:
 - `OUTPUT_FILENAME`: the path and filename of the output subtitle files <ins>without the extension</ins>. The script will add the language and .srt extension by itself.
-- `SOURCE_FILE_URL`: the URL of the source Google Doc, in CSV format
+- `SOURCE_FILE_URL`: the URL of the source Google Doc, in CSV format (shouldn't be changed)
 
 
-# To run
+## To run
 
 In a terminal, do the following:
 
 - Install Poetry
 
-    - on MacOS, do:
+    - on MacOS, type:
     ```sh
     brew install poetry
     ```
-    - on Debian/Ubunto, do:
+    - on Debian/Ubuntu, type:
     ```sh
-    bapt-get install poetry
+    apt-get install poetry
     ```
     - on Windows, I have no idea
 
@@ -53,7 +58,8 @@ In a terminal, do the following:
 
     etc.
 
-# Available languages
+
+## Available languages
 
 ```
 'af': 'afrikaans'
