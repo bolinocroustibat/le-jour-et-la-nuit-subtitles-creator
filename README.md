@@ -1,38 +1,57 @@
 # Requirements
 
-- Poetry
+- Python 3.9 (not tested below 3.9, but it should be fine with 3.8)
+- [Poetry](https://python-poetry.org/) (Python packaging manager)
 
-If you don't use Poetry, the Python requirements are:
-- googletrans
-- typer
+If you don't use Poetry and want to install the Python dependencies manually, the Python requirements are:
+- [googletrans](https://pypi.org/project/googletrans/)
+- [typer](https://pypi.org/project/typer/)
+
+
+# Configure
+
+Open the file `config.py` and modify the following values if necessary:
+- `OUTPUT_FILENAME`: the path and filename of the output subtitle files <ins>without the extension</ins>. The script will add the language and .srt extension by itself.
+- `SOURCE_FILE_URL`: the URL of the source Google Doc, in CSV format
 
 
 # To run
 
 In a terminal, do the following:
 
-Install Poetry. On MacOS, do:
-```sh
-brew install poetry
-```
+- Install Poetry
+
+    - on MacOS, do:
+    ```sh
+    brew install poetry
+    ```
+    - on Debian/Ubunto, do:
+    ```sh
+    bapt-get install poetry
+    ```
+    - on Windows, I have no idea
 
 
-To convert into French subtitles:
-```sh
-poetry run python main.py fr
-```
+- Launch the subtitle creation
 
-To convert into Engligh subtitles:
-```sh
-poetry run python main.py en
-```
+    Subtitle file will be exported in the path you defined in `config.py` as `OUTPUT_FILENAME`.
 
-To convert into Spanish subtitles:
-```sh
-poetry run python main.py es
-```
+    To convert into French subtitles:
+    ```sh
+    poetry run python main.py fr
+    ```
 
-etc.
+    To convert into Engligh subtitles:
+    ```sh
+    poetry run python main.py en
+    ```
+
+    To convert into Spanish subtitles:
+    ```sh
+    poetry run python main.py es
+    ```
+
+    etc.
 
 # Available languages
 
