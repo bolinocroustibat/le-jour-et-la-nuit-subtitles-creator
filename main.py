@@ -25,12 +25,17 @@ def create_subtitles(lang: str) -> None:
         if lang != "fr":
             translator = Translator()
 
-        # If source CSV is online Google Doc
-        webpage = urllib.request.urlopen(SOURCE_FILE_PATH)
-        reader = csv.reader(io.TextIOWrapper(webpage))
-
-        # # If source CSV is local file
-        # reader = csv.reader(open(SOURCE_FILE_PATH, encoding="utf-8"))
+        try:
+            typer.secho("Reading from online CSV Google Doc.", fg=typer.colors.MAGENTA)
+            # Try to read from the online Google Doc
+            webpage = urllib.request.urlopen(SOURCE_CSV_URL)
+            reader = csv.reader(io.TextIOWrapper(webpage))
+        except:
+            typer.secho(
+                f"Reading from local CSV {SOURCE_CSV_LOCAL_PATH}.",
+                fg=typer.colors.MAGENTA,
+            )
+            reader = csv.reader(open(SOURCE_CSV_LOCAL_PATH, encoding="utf-8"))
 
         next(reader)  # Skip first line
 
