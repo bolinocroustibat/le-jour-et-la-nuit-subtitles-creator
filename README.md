@@ -34,7 +34,10 @@ In a terminal, do the following:
     ```sh
     apt-get install poetry
     ```
-    - on Windows, I have no idea
+    - on Windows, use pip:
+    ```
+    pip install poetry
+    ```
 
 
 - Launch the subtitle creation
